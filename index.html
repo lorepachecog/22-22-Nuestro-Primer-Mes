@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#120d0f">
+  <meta name="description" content="Mis votos hacia ti. Una carta de amor.">
+  <title>Mis votos hacia ti ♡</title>
+  <style>
+    :root{
+      --bg:#0d090b;
+      --panel:#171013;
+      --text:#f8eee9;
+      --muted:#c9b9b3;
+      --red:#a51f2c;
+      --red-soft:#d95a64;
+      --line:rgba(255,255,255,.12);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(165,31,44,.20), transparent 35rem),
+        var(--bg);
+      color:var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height:1.75;
+    }
+    .wrap{width:min(920px, 100%); margin:auto}
+    .hero{
+      min-height:100svh;
+      display:grid;
+      place-items:end center;
+      position:relative;
+      overflow:hidden;
+      background:#080608;
+    }
+    .hero img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+      filter:brightness(.56) saturate(.9);
+    }
+    .hero:after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to bottom, rgba(0,0,0,.05) 20%, rgba(13,9,11,.25) 50%, #0d090b 100%);
+    }
+    .hero-content{
+      position:relative;
+      z-index:2;
+      width:min(760px, 92%);
+      padding:4rem 0 3rem;
+      text-align:center;
+    }
+    .eyebrow{
+      text-transform:uppercase;
+      letter-spacing:.28em;
+      font:12px/1.4 Arial,sans-serif;
+      opacity:.85;
+      margin-bottom:1rem;
+    }
+    h1{
+      font-size:clamp(3rem,10vw,6.7rem);
+      line-height:.95;
+      font-weight:400;
+      margin:.1em 0 .25em;
+      text-shadow:0 4px 30px rgba(0,0,0,.5);
+    }
+    .heart{color:var(--red-soft)}
+    .subtitle{font-style:italic; font-size:clamp(1.05rem,3vw,1.4rem); color:#f1dfd8}
+    .scroll{
+      display:inline-block;
+      margin-top:2rem;
+      padding:.75rem 1.4rem;
+      border:1px solid rgba(255,255,255,.35);
+      border-radius:999px;
+      color:white;
+      text-decoration:none;
+      font:12px Arial,sans-serif;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      backdrop-filter:blur(5px);
+    }
+    main{padding:4rem 1.25rem 6rem}
+    section{padding:3rem 0}
+    .divider{
+      width:80px;
+      height:1px;
+      background:linear-gradient(90deg,transparent,var(--red-soft),transparent);
+      margin:0 auto 2.5rem;
+    }
+    .intro{
+      text-align:center;
+      color:var(--muted);
+      font-size:1.05rem;
+      max-width:650px;
+      margin:0 auto;
+    }
+    .card{
+      background:linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.018));
+      border:1px solid var(--line);
+      border-radius:26px;
+      padding:clamp(1.5rem,4vw,3rem);
+      box-shadow:0 25px 70px rgba(0,0,0,.22);
+    }
+    h2{
+      text-align:center;
+      font-weight:400;
+      font-size:clamp(2rem,6vw,3.4rem);
+      margin:0 0 2.5rem;
+    }
+    .letter p{margin:0 0 1.4rem}
+    .vows{
+      margin:1.6rem 0 2rem;
+      padding-left:1.35rem;
+    }
+    .vows li{
+      padding-left:.3rem;
+      margin:.55rem 0;
+    }
+    .vows li::marker{color:var(--red-soft)}
+    .closing{
+      font-size:clamp(1.25rem,4vw,1.75rem);
+      text-align:center;
+      font-style:italic;
+      margin-top:2.5rem;
+    }
+    .media{
+      display:grid;
+      gap:1.5rem;
+    }
+    .media img,.media video{
+      display:block;
+      width:100%;
+      border-radius:22px;
+      border:1px solid var(--line);
+      box-shadow:0 20px 50px rgba(0,0,0,.3);
+    }
+    .caption{
+      text-align:center;
+      color:var(--muted);
+      font-style:italic;
+      margin:.2rem auto 0;
+    }
+    footer{
+      text-align:center;
+      color:#a89590;
+      font-size:.9rem;
+      padding:0 1.5rem 3rem;
+    }
+    .tiny-heart{
+      color:var(--red-soft);
+      font-size:1.2rem;
+    }
+    @media (min-width:760px){
+      main{padding-left:2rem;padding-right:2rem}
+      .media{grid-template-columns:1fr 1fr; align-items:start}
+      .media video{max-height:720px; object-fit:cover}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img src="assets/portada.jpeg" alt="Lore y Moisés juntos al atardecer">
+    <div class="hero-content">
+      <div class="eyebrow">Una carta para ti</div>
+      <h1>Mis votos<br><span class="heart">hacia ti</span></h1>
+      <div class="subtitle">Porque yo estuve orando por ti.</div>
+      <a class="scroll" href="#carta">Leer la carta</a>
+    </div>
+  </header>
+
+  <main id="carta" class="wrap">
+    <section>
+      <div class="divider"></div>
+      <p class="intro">Hay historias que parecen empezar el día que dos personas se conocen. Y hay historias que, de alguna manera, comenzaron mucho antes.</p>
+    </section>
+
+    <section>
+      <div class="card letter">
+        <h2>Mis votos hacia ti</h2>
+
+        <p>Pensé en ti mucho antes de conocerte, sabes?</p>
+
+        <p>Pensaba en ti a menudo.. cuando regresaba a mi casa con el corazón apachurrado, esas noches de ver el techo de mi casa y sentirme chiquita y el mundo tan inmenso sobre mis hombros.. esos días donde el dolor y la soledad se apoderaban de mí, pensaba en ti siempre que mis lágrimas rodaban cuando le hablaba a Dios.</p>
+
+        <p>Y en esas oraciones a Dios yo te busqué, y le supliqué que me dejara llegar a ti, a esa persona que entendiera mi manera de amar y que amara justamente así, sin reparo, sin contención, sin pretensión. Y que si no existía entonces quitara de mi corazón la necesidad de recibir lo mismo que yo daba. Pero ese sentimiento de vacío no se iba y es cuando supe que no debía dejar de buscarte.</p>
+
+        <p>Te busqué en cada vela que sople, en cada estrella fugaz que vi, en cada 11:11.</p>
+
+        <p>Porque yo sabía que tenía que existir alguien con mi mismo corazón. Y resultó que también tenía mi mismo signo y mes de cumpleaños 🤭 te encontré, sin saber que todo este amor que tenía guardado, un día tendría tu nombre.</p>
+
+        <p>Ahí es donde supe que conocerte tarde en la vida era como debía ser, porque así es como puedo comprometerme a lo siguiente:</p>
+
+        <ul class="vows">
+          <li>Amarte fuerte y bonito</li>
+          <li>Cuidarte sin controlarte</li>
+          <li>Tenerte sin poseerte</li>
+          <li>Apoyarte sin frenarte</li>
+          <li>Alentarte sin apagarte</li>
+          <li>Que si me canso de ti, me voy a dormir y lo sigo intentando al día siguiente.</li>
+          <li>Proteger tu corazón como si fuera el mío.</li>
+          <li>Hacerte feliz.</li>
+          <li>Buscar las maneras de seguir enamorándote cada día.</li>
+          <li>Admirarte y decírtelo siempre.</li>
+          <li>Aprender tus maneras de amar y en las que necesitas ser amado.</li>
+          <li>Mostrarte lo que es ser amado correctamente.</li>
+          <li>Sanar tu corazón un besito a la vez.</li>
+        </ul>
+
+        <p>Y si en algún momento fallo, me equivoco, me desvío del camino.. agárrame fuerte de la mano y regrésame a ti.. por que ahí es donde quiero estar. No te puedo prometer una vida perfecta, pero si te puedo prometer mi compañía. No puedo quitar el sufrimiento o las dificultades del camino pero si te puedo prometer que estaré ahí a tu lado para enfrentarlo todo juntos, como equipo. Podría decirse que lo nuestro fue amor a primera vista, pero yo creo que es amor a cada vista. Porque cada vez que te veo me enamoro de ti. Es como tirar una moneda al aire y que ambas caras me hagan ganar.</p>
+
+        <p class="closing">Por que todos esperan por un amor como este.. pero yo? Yo estuve orando por ti. <span class="tiny-heart">♥</span></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Nuestro momento</h2>
+      <div class="media">
+        <img src="assets/portada.jpeg" alt="Fotografía de Lore y Moisés">
+        <div>
+          <video controls playsinline preload="metadata">
+            <source src="assets/nuestro-video.mp4" type="video/mp4">
+            Tu navegador no puede reproducir este video.
+          </video>
+          <p class="caption">Un pedacito de nosotros.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Hecho con amor, para ti. <span class="tiny-heart">♥</span>
+  </footer>
+</body>
+</html>
